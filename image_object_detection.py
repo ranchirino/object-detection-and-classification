@@ -14,15 +14,17 @@ import sys
 import tarfile
 import tensorflow as tf
 import zipfile
+import datetime
 
 from distutils.version import StrictVersion
 from collections import defaultdict
 from io import StringIO
 from matplotlib import pyplot as plt
 from PIL import Image
+from pathlib import Path
 
 # This is needed since the notebook is stored in the object_detection folder.
-sys.path.append("..")
+# sys.path.append("..")
 from object_detection.utils import ops as utils_ops
 
 if StrictVersion(tf.__version__) < StrictVersion('1.9.0'):
@@ -57,14 +59,18 @@ from object_detection.utils import visualization_utils as vis_util
 
 # What model to download.
 MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'
+
+MODEL_PATH = Path('models').joinpath(MODEL_NAME)
+if not MODEL_PATH.exists():
+    MODEL_PATH.mkdir()
+
+# MODEL_PATH = os.path.join('models', MODEL_NAME)
 MODEL_FILE = MODEL_NAME + '.tar.gz'
 DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
 
-# Path to frozen detection graph. This is the actual model that is used for the object detection.
-PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/frozen_inference_graph.pb'
-
 # List of the strings that is used to add correct label for each box.
 PATH_TO_LABELS = os.path.join('data', 'mscoco_label_map.pbtxt')
+# PATH_TO_LABELS = Path('data').joinpath('mscoco_label_map.pbtxt')
 
 
 
@@ -74,18 +80,20 @@ PATH_TO_LABELS = os.path.join('data', 'mscoco_label_map.pbtxt')
 
 
 opener = urllib.request.URLopener()
-opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, MODEL_FILE)
-tar_file = tarfile.open(MODEL_FILE)
+opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, Path(MODEL_PATH).joinpath(MODEL_FILE))
+tar_file = tarfile.open(Path(MODEL_PATH).joinpath(MODEL_FILE))
 for file in tar_file.getmembers():
   file_name = os.path.basename(file.name)
   if 'frozen_inference_graph.pb' in file_name:
-    tar_file.extract(file, os.getcwd())
+    tar_file.extract(file, path='models')
 
 
 # ## Load a (frozen) Tensorflow model into memory.
 
 # In[6]:
 
+# Path to frozen detection graph. This is the actual model that is used for the object detection.
+PATH_TO_FROZEN_GRAPH = os.path.join(MODEL_PATH, 'frozen_inference_graph.pb')
 
 detection_graph = tf.Graph()
 with detection_graph.as_default():
@@ -126,7 +134,7 @@ def load_image_into_numpy_array(image):
 # image2.jpg
 # If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.
 PATH_TO_TEST_IMAGES_DIR = 'test_images'
-TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(1, 3) ]
+TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(1, 2) ]
 
 # Size, in inches, of the output images.
 IMAGE_SIZE = (12, 8)
@@ -190,7 +198,7 @@ def run_inference_for_single_image(image, graph):
 
 # In[12]:
 
-
+t1 = datetime.datetime.now()
 for image_path in TEST_IMAGE_PATHS:
   image = Image.open(image_path)
   # the array based representation of the image will be used later in order to prepare the
@@ -213,7 +221,9 @@ for image_path in TEST_IMAGE_PATHS:
   plt.figure(figsize=IMAGE_SIZE)
   plt.imshow(image_np)
   plt.show()
+t2 = datetime.datetime.now()
 
-
+print(t2-t1)
+# 0:00:04.217781
 
 
