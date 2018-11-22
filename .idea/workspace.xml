@@ -18,8 +18,8 @@
       <file leaf-file-name="image_object_detection.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/image_object_detection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+            <state>
+              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="18" />
               <folding>
                 <element signature="e#394#412#0" expanded="true" />
               </folding>
@@ -30,7 +30,7 @@
       <file leaf-file-name="video_object_detection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/video_object_detection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
+            <state relative-caret-position="3300">
               <caret line="239" column="58" selection-start-line="239" selection-start-column="58" selection-end-line="239" selection-end-column="58" />
               <folding>
                 <element signature="e#393#411#0" expanded="true" />
@@ -201,21 +201,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="5" sideWeight="0.5015432" side_tool="true" visible="true" weight="0.27760416" />
+      <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="5" sideWeight="0.5015432" side_tool="true" visible="true" weight="0.2774524" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.25398514" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31137088" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3100159" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.36556855" visible="true" weight="0.17708333" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.36406994" visible="true" weight="0.17642753" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" x="0" y="23" width="1920" height="1017" id="SciView" order="4" sideWeight="0.49845678" type="WINDOWED" weight="0.3296875" />
-      <window_info id="Structure" order="1" sideWeight="0.6344315" side_tool="true" visible="true" weight="0.17708333" />
+      <window_info id="Structure" order="1" sideWeight="0.63593006" side_tool="true" visible="true" weight="0.17642753" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -234,6 +234,26 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/image_object_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+          <folding>
+            <element signature="e#394#412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video_object_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3585">
+          <caret line="239" column="58" selection-start-line="239" selection-start-column="58" selection-end-line="239" selection-end-column="58" />
+          <folding>
+            <element signature="e#393#411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/image_object_detection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -283,7 +303,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/video_object_detection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
+        <state relative-caret-position="3300">
           <caret line="239" column="58" selection-start-line="239" selection-start-column="58" selection-end-line="239" selection-end-column="58" />
           <folding>
             <element signature="e#393#411#0" expanded="true" />
@@ -293,8 +313,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/image_object_detection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+        <state>
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="18" />
           <folding>
             <element signature="e#394#412#0" expanded="true" />
           </folding>
