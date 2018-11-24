@@ -31,12 +31,6 @@ if StrictVersion(tf.__version__) < StrictVersion('1.9.0'):
   raise ImportError('Please upgrade your TensorFlow installation to v1.9.* or later!')
 
 
-# ## Env setup
-
-# In[2]:
-
-
-
 # ## Object detection imports
 # Here are the imports from the object detection module.
 

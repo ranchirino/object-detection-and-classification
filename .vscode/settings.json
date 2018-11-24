@@ -1,4 +1,4 @@
 {
     "python.linting.pylintEnabled": true,
-    "python.pythonPath": "C:\\Users\\Rangel\\Anaconda3\\envs\\tensorflow\\python.exe"
+    "python.pythonPath": "/home/ranchirino/anaconda3/envs/tensorflow/bin/python"
 }
