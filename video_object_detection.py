@@ -190,7 +190,7 @@ def run_inference_for_single_image(image, graph):
 
 # In[12]:
 PATH_TO_TEST_VIDEOS_DIR = 'test_videos'
-VIDEO = os.path.join(PATH_TO_TEST_VIDEOS_DIR, 'TwinForksPestControl.com SOUTHAMPTON TRAFFIC CAM (1080p HD) - 15fps.mp4')
+VIDEO = os.path.join(PATH_TO_TEST_VIDEOS_DIR, 'video.MP4')
 cap = cv2.VideoCapture(VIDEO)
 
 
@@ -219,7 +219,7 @@ cap = cv2.VideoCapture(VIDEO)
 #         cv2.destroyAllWindows()
 #         break
 
-
+# In[13]:
 reader = imageio.get_reader(VIDEO)
 # reader.get_meta_data()
 
@@ -245,4 +245,7 @@ for frame in reader:
     if cv2.waitKey(25) & 0xFF == ord('q'):
         cv2.destroyAllWindows()
         break
+
+    # plt.imshow(frame)
+    # plt.show()
 

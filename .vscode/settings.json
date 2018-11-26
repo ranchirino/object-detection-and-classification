@@ -1,4 +1,4 @@
 {
     "python.linting.pylintEnabled": true,
-    "python.pythonPath": "/home/ranchirino/anaconda3/envs/tensorflow/bin/python"
+    "python.pythonPath": "/home/ranchirino/anaconda3/envs/tensorflow1.9/bin/python"
 }
