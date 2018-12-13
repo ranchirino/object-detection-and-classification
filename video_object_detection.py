@@ -250,10 +250,10 @@ for i, frame in enumerate(reader):
     writer.append_data(frame)
 
     # cv2.imshow('Vehicle Detection', cv2.resize(frame, (840, 480)))
-    # cv2.imshow('Vehicle Detection', frame)
-    # if cv2.waitKey(25) & 0xFF == ord('q'):
-    #     cv2.destroyAllWindows()
-    #     break
+    cv2.imshow('Vehicle Detection', frame)
+    if cv2.waitKey(25) & 0xFF == ord('q'):
+        cv2.destroyAllWindows()
+        break
 
 writer.close()
 
