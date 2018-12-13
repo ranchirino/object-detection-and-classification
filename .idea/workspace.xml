@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="201fc739-a6b6-4060-aa16-1bf559d612a2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/obj_det_GPU.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/object-detection-and-classification.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/object-detection-and-classification.iml" afterDir="false" />
+    <list default="true" id="201fc739-a6b6-4060-aa16-1bf559d612a2" name="Default" comment="_">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_object_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_object_detection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_detection1.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/video_detection1.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_object_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/video_object_detection.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/image_object_detection.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="537">
-              <caret line="225" lean-forward="true" selection-start-line="225" selection-end-line="225" />
+              <caret line="225" selection-start-line="225" selection-end-line="225" />
               <folding>
                 <element signature="e#394#412#0" expanded="true" />
               </folding>
@@ -60,7 +53,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/obj_det_GPU.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
+            <state relative-caret-position="538">
               <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -97,7 +90,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="29" />
     <option name="y" value="18" />
     <option name="width" value="1346" />
@@ -249,19 +242,26 @@
       <updated>1542728726342</updated>
       <workItem from="1544649907410" duration="667000" />
       <workItem from="1544650600169" duration="230000" />
-      <workItem from="1544651404660" duration="7206000" />
+      <workItem from="1544651404660" duration="7440000" />
     </task>
+    <task id="LOCAL-00001" summary="_">
+      <created>1544659587027</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544659587027</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8103000" />
+    <option name="totallyTimeSpent" value="8337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.35849056" visible="true" weight="0.18123667" />
-      <window_info id="Structure" order="1" sideWeight="0.6415094" side_tool="true" visible="true" weight="0.18123667" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.357971" visible="true" weight="0.18123667" />
+      <window_info id="Structure" order="1" sideWeight="0.642029" side_tool="true" visible="true" weight="0.18123667" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -274,8 +274,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.2535211" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.2524377" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -286,6 +286,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="_" />
+    <option name="LAST_COMMIT_MESSAGE" value="_" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/pycharm64.exe.vmoptions">
@@ -298,7 +302,7 @@
     <entry file="file://$PROJECT_DIR$/image_object_detection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
-          <caret line="225" lean-forward="true" selection-start-line="225" selection-end-line="225" />
+          <caret line="225" selection-start-line="225" selection-end-line="225" />
           <folding>
             <element signature="e#394#412#0" expanded="true" />
           </folding>
@@ -317,7 +321,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/obj_det_GPU.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
+        <state relative-caret-position="538">
           <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
