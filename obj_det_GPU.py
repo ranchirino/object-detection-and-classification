@@ -121,40 +121,22 @@ with detection_graph.as_default():
         detection_scores = detection_graph.get_tensor_by_name('detection_scores:0')
         detection_classes = detection_graph.get_tensor_by_name('detection_classes:0')
         num_detections = detection_graph.get_tensor_by_name('num_detections:0')
-        # i = 0
-        # for _ in range(10):
-        #     image_path = TEST_IMAGE_PATHS[1]
-        #     i += 1
-        #     image = Image.open(image_path)
-        #     image_np = load_image_into_numpy_array(image)
-        #     image_np_expanded = np.expand_dims(image_np, axis=0)
-        #
-        #     start_time = time.time()
-        #     (score, expand) = sess.run([score_out, expand_out], feed_dict={image_tensor: image_np_expanded})
-        #     (boxes, scores, classes, num) = sess.run(
-        #         [detection_boxes, detection_scores, detection_classes, num_detections],
-        #         feed_dict={score_in: score, expand_in: expand})
-        #     print('Iteration %d: %.3f sec' % (i, time.time() - start_time))
-        #
-        #     vis_util.visualize_boxes_and_labels_on_image_array(
-        #         image_np,
-        #         np.squeeze(boxes),
-        #         np.squeeze(classes).astype(np.int32),
-        #         np.squeeze(scores),
-        #         category_index,
-        #         use_normalized_coordinates=True,
-        #         line_thickness=5)
 
-        for image_path in TEST_IMAGE_PATHS:
+        i = 0
+        for _ in range(10):
+            image_path = TEST_IMAGE_PATHS[1]
+            i += 1
             image = Image.open(image_path)
             image_np = load_image_into_numpy_array(image)
             image_np_expanded = np.expand_dims(image_np, axis=0)
-
+        
+            start_time = time.time()
             (score, expand) = sess.run([score_out, expand_out], feed_dict={image_tensor: image_np_expanded})
             (boxes, scores, classes, num) = sess.run(
                 [detection_boxes, detection_scores, detection_classes, num_detections],
                 feed_dict={score_in: score, expand_in: expand})
-
+            print('Iteration %d: %.3f sec' % (i, time.time() - start_time))
+        
             vis_util.visualize_boxes_and_labels_on_image_array(
                 image_np,
                 np.squeeze(boxes),
@@ -164,6 +146,26 @@ with detection_graph.as_default():
                 use_normalized_coordinates=True,
                 line_thickness=5)
 
-            plt.figure(figsize=IMAGE_SIZE)
-            plt.imshow(image_np)
-            plt.show()
+
+        # for image_path in TEST_IMAGE_PATHS:
+        #     image = Image.open(image_path)
+        #     image_np = load_image_into_numpy_array(image)
+        #     image_np_expanded = np.expand_dims(image_np, axis=0)
+
+        #     (score, expand) = sess.run([score_out, expand_out], feed_dict={image_tensor: image_np_expanded})
+        #     (boxes, scores, classes, num) = sess.run(
+        #         [detection_boxes, detection_scores, detection_classes, num_detections],
+        #         feed_dict={score_in: score, expand_in: expand})
+
+        #     vis_util.visualize_boxes_and_labels_on_image_array(
+        #         image_np,
+        #         np.squeeze(boxes),
+        #         np.squeeze(classes).astype(np.int32),
+        #         np.squeeze(scores),
+        #         category_index,
+        #         use_normalized_coordinates=True,
+        #         line_thickness=5)
+
+        #     plt.figure(figsize=IMAGE_SIZE)
+        #     plt.imshow(image_np)
+        #     plt.show()

@@ -216,7 +216,7 @@ for image_path in TEST_IMAGE_PATHS:
       line_thickness=8)
   plt.figure(figsize=IMAGE_SIZE)
   plt.imshow(image_np)
-  # plt.show()
+  plt.show()
 t2 = datetime.datetime.now()
 
 print(t2-t1)
