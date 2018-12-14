@@ -20,6 +20,7 @@ from io import StringIO
 from matplotlib import pyplot as plt
 from PIL import Image
 from pathlib import Path
+import datetime
 
 import cv2
 import imageio
@@ -174,8 +175,11 @@ def run_inference_for_single_image(image, graph):
       image_tensor = tf.get_default_graph().get_tensor_by_name('image_tensor:0')
 
       # Run inference
+      t1 = datetime.datetime.now()
       output_dict = sess.run(tensor_dict,
                              feed_dict={image_tensor: np.expand_dims(image, 0)})
+      t2 = datetime.datetime.now()
+      print(t2-t1)
 
       # all outputs are float32 numpy arrays, so convert types as appropriate
       output_dict['num_detections'] = int(output_dict['num_detections'][0])
@@ -190,7 +194,7 @@ def run_inference_for_single_image(image, graph):
 
 # In[12]:
 PATH_TO_TEST_VIDEOS_DIR = 'test_videos'
-VIDEO = os.path.join(PATH_TO_TEST_VIDEOS_DIR, 'TwinForksPestControl.com SOUTHAMPTON TRAFFIC CAM (1080p HD) - 15fps.mp4')
+VIDEO = os.path.join(PATH_TO_TEST_VIDEOS_DIR, 'video_15fps.mp4')
 cap = cv2.VideoCapture(VIDEO)
 
 
@@ -214,21 +218,23 @@ cap = cv2.VideoCapture(VIDEO)
 #         use_normalized_coordinates=True,
 #         line_thickness=8)
 #
-#     cv2.imshow('Vehicle Detection', cv2.resize(frame_np, (800,600)))
+#     cv2.imshow('Vehicle Detection', cv2.resize(frame_np, (840,480)))
 #     if cv2.waitKey(25) & 0xFF == ord('q'):
 #         cv2.destroyAllWindows()
 #         break
 
-
+# In[13]:
 reader = imageio.get_reader(VIDEO)
+writer = imageio.get_writer('video_detection1.mp4', fps=15)
 # reader.get_meta_data()
 
-for frame in reader:
+for i, frame in enumerate(reader):
+    print("frame", i)
     # Expand dimensions since the model expects images to have shape: [1, None, None, 3]
-    frame_expanded = np.expand_dims(frame, axis=0)
-
     # Actual detection.
     output_dict = run_inference_for_single_image(frame, detection_graph)
+
+    frame_expanded = np.expand_dims(frame, axis=0)
 
     # Visualization of the results of a detection.
     vis_util.visualize_boxes_and_labels_on_image_array(
@@ -239,10 +245,17 @@ for frame in reader:
         category_index,
         instance_masks=output_dict.get('detection_masks'),
         use_normalized_coordinates=True,
-        line_thickness=8)
+        line_thickness=2)
 
+    writer.append_data(frame)
+
+    # cv2.imshow('Vehicle Detection', cv2.resize(frame, (840, 480)))
     cv2.imshow('Vehicle Detection', frame)
     if cv2.waitKey(25) & 0xFF == ord('q'):
         cv2.destroyAllWindows()
         break
+
+writer.close()
+
+
 

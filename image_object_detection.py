@@ -25,16 +25,12 @@ from pathlib import Path
 
 # This is needed since the notebook is stored in the object_detection folder.
 # sys.path.append("..")
+# from tf_models.research import object_detection
 from object_detection.utils import ops as utils_ops
+
 
 if StrictVersion(tf.__version__) < StrictVersion('1.9.0'):
   raise ImportError('Please upgrade your TensorFlow installation to v1.9.* or later!')
-
-
-# ## Env setup
-
-# In[2]:
-
 
 
 # ## Object detection imports
@@ -220,7 +216,7 @@ for image_path in TEST_IMAGE_PATHS:
       line_thickness=8)
   plt.figure(figsize=IMAGE_SIZE)
   plt.imshow(image_np)
-  plt.show()
+  # plt.show()
 t2 = datetime.datetime.now()
 
 print(t2-t1)
