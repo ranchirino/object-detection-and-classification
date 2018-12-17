@@ -4,6 +4,9 @@ import sys
 
 import tensorflow as tf
 
+from matplotlib import pyplot as plt
+from PIL import Image
+
 import time
 import datetime
 import copy
@@ -12,8 +15,6 @@ from tensorflow.core.framework import graph_pb2
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 
-from matplotlib import pyplot as plt
-from PIL import Image
 
 def _node_name(n):
   if n.startswith("^"):
