@@ -4,6 +4,7 @@ import sys
 
 import tensorflow as tf
 
+# import matplotlib
 from matplotlib import pyplot as plt
 from PIL import Image
 
@@ -88,20 +89,17 @@ with detection_graph.as_default():
         for n in nodes_to_remove_list:
             remove.node.extend([copy.deepcopy(name_to_node_map[n])])
 
-        with tf.device('/cpu:0'):
+        with tf.device('/gpu:0'):
             tf.import_graph_def(keep, name='')
         with tf.device('/cpu:0'):
             tf.import_graph_def(remove, name='')
 
-MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'
-writer = tf.summary.FileWriter(logdir=os.path.join('tb_graph', MODEL_NAME), graph=detection_graph)
-writer.close()
 
-# NUM_CLASSES = 90
+MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'
+# writer = tf.summary.FileWriter(logdir=os.path.join('tb_graph', MODEL_NAME), graph=detection_graph)
+# writer.close()
+
 PATH_TO_LABELS = os.path.join('data', 'mscoco_label_map.pbtxt')
-# label_map = label_map_util.load_labelmap('data/mscoco_label_map.pbtxt')
-# categories = label_map_util.convert_label_map_to_categories(label_map, max_num_classes=NUM_CLASSES, use_display_name=True)
-# category_index = label_map_util.create_category_index(categories)
 category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS, use_display_name=True)
 
 def load_image_into_numpy_array(image):
@@ -117,7 +115,11 @@ IMAGE_SIZE = (12, 8)
 
 def run_inference_for_single_image(image, graph):
     with graph.as_default():
-        with tf.Session(graph=graph) as sess:
+        config = tf.ConfigProto()
+        # config.gpu_options.allow_growth = True
+        config.allow_soft_placement = True
+        # config.log_device_placement = True
+        with tf.Session(graph=graph, config=config) as sess:
             image_tensor = tf.get_default_graph().get_tensor_by_name('image_tensor:0')
 
             score_out = detection_graph.get_tensor_by_name('Postprocessor/convert_scores:0')
@@ -153,13 +155,17 @@ def run_inference_for_single_image(image, graph):
                 output_dict['detection_masks'] = output_dict['detection_masks'][0]
     return output_dict
 
-t1 = datetime.datetime.now()
+
+
 for image_path in TEST_IMAGE_PATHS:
     image = Image.open(image_path)
     image_np = load_image_into_numpy_array(image)
     # image_np_expanded = np.expand_dims(image_np, axis=0)
 
+    t1 = datetime.datetime.now()
     output_dict = run_inference_for_single_image(image_np, detection_graph)
+    t2 = datetime.datetime.now()
+    print(t2 - t1)
 
     vis_util.visualize_boxes_and_labels_on_image_array(
         image_np,
@@ -174,8 +180,7 @@ for image_path in TEST_IMAGE_PATHS:
     plt.figure(figsize=IMAGE_SIZE)
     plt.imshow(image_np)
     plt.show()
-t2 = datetime.datetime.now()
-print(t2-t1)
+
 
 
 # with detection_graph.as_default():
