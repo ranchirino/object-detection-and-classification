@@ -1,20 +1,12 @@
-# # Object Detection
-# Welcome to the object detection inference walkthrough!  This notebook will walk you step by step through the process of using a pre-trained model to detect objects in an image. Make sure to follow the [installation instructions](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md) before you start.
-
-# # Imports
-
-# In[1]:
-
 
 import numpy as np
 import os
-import six.moves.urllib as urllib
+# import six.moves.urllib as urllib
 import sys
-import tarfile
+# import tarfile
 import tensorflow as tf
-import zipfile
+# import zipfile
 
-from distutils.version import StrictVersion
 from collections import defaultdict
 from io import StringIO
 from matplotlib import pyplot as plt
@@ -27,20 +19,6 @@ import imageio
 # imageio.plugins.ffmpeg.download()
 
 from object_detection.utils import ops as utils_ops
-
-if StrictVersion(tf.__version__) < StrictVersion('1.9.0'):
-  raise ImportError('Please upgrade your TensorFlow installation to v1.9.* or later!')
-
-
-# In[2]:
-
-
-
-# ## Object detection imports
-# Here are the imports from the object detection module.
-
-# In[3]:
-
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 
@@ -78,13 +56,13 @@ PATH_TO_LABELS = os.path.join('data', 'mscoco_label_map.pbtxt')
 # In[5]:
 
 
-opener = urllib.request.URLopener()
-opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, Path(MODEL_PATH).joinpath(MODEL_FILE))
-tar_file = tarfile.open(Path(MODEL_PATH).joinpath(MODEL_FILE))
-for file in tar_file.getmembers():
-  file_name = os.path.basename(file.name)
-  if 'frozen_inference_graph.pb' in file_name:
-    tar_file.extract(file, path='models')
+# opener = urllib.request.URLopener()
+# opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, Path(MODEL_PATH).joinpath(MODEL_FILE))
+# tar_file = tarfile.open(Path(MODEL_PATH).joinpath(MODEL_FILE))
+# for file in tar_file.getmembers():
+#   file_name = os.path.basename(file.name)
+#   if 'frozen_inference_graph.pb' in file_name:
+#     tar_file.extract(file, path='models')
 
 
 # ## Load a (frozen) Tensorflow model into memory.
@@ -234,7 +212,7 @@ for i, frame in enumerate(reader):
     # Actual detection.
     output_dict = run_inference_for_single_image(frame, detection_graph)
 
-    frame_expanded = np.expand_dims(frame, axis=0)
+    # frame_expanded = np.expand_dims(frame, axis=0)
 
     # Visualization of the results of a detection.
     vis_util.visualize_boxes_and_labels_on_image_array(
