@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="201fc739-a6b6-4060-aa16-1bf559d612a2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/obj_det_GPU.py" beforeDir="false" afterPath="$PROJECT_DIR$/obj_det_GPU.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object_detections_GPU-then-CPU (1).ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/object_detections_GPU-then-CPU (1).ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tb_graph/ssd_mobilenet_v1_coco_2017_11_17/events.out.tfevents.1544887967.LAPTOP-L8SE0NFC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tb_graph/ssd_mobilenet_v1_coco_2017_11_17/events.out.tfevents.1544890921.LAPTOP-L8SE0NFC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tb_graph/ssd_mobilenet_v1_coco_2017_11_17/events.out.tfevents.1544892154.LAPTOP-L8SE0NFC" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_videos/Jackson Hole Wyoming USA Town Square Live Cam - SeeJH.com - YouTube.MP4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_videos/TwinForksPestControl.com SOUTHAMPTON TRAFFIC CAM (1080p HD) - 15fps.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_detection.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_detection1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_object_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/video_object_detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video_GPU.py" beforeDir="false" afterPath="$PROJECT_DIR$/video_GPU.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +32,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/video_GPU.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="244">
-                  <caret line="111" column="137" selection-start-line="111" selection-start-column="137" selection-end-line="111" selection-end-column="137" />
+                <state relative-caret-position="499">
+                  <caret line="196" lean-forward="true" selection-start-line="196" selection-end-line="196" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -52,12 +44,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/obj_det_GPU.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="498">
-                  <caret line="158" column="33" selection-start-line="151" selection-start-column="12" selection-end-line="158" selection-end-column="33" />
+                <state relative-caret-position="301">
+                  <caret line="135" column="42" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="42" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -68,7 +60,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/video_object_detection.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="754">
+                <state relative-caret-position="3225">
                   <caret line="236" selection-start-line="236" selection-end-line="236" />
                   <folding>
                     <element signature="e#1#19#0" expanded="true" />
@@ -159,6 +151,9 @@
       <module name="object-detection-and-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -222,6 +217,9 @@
       <module name="object-detection-and-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -311,7 +309,8 @@
       <workItem from="1545070053786" duration="4218000" />
       <workItem from="1545082533059" duration="5092000" />
       <workItem from="1545088542940" duration="324000" />
-      <workItem from="1545148962444" duration="10776000" />
+      <workItem from="1545148962444" duration="13065000" />
+      <workItem from="1545172132231" duration="8699000" />
     </task>
     <task id="LOCAL-00001" summary="_">
       <created>1544659587027</created>
@@ -324,14 +323,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28747000" />
+    <option name="totallyTimeSpent" value="39735000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.35095447" visible="true" weight="0.1359275" />
-      <window_info id="Structure" order="1" sideWeight="0.6490455" side_tool="true" visible="true" weight="0.1359275" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.34948605" visible="true" weight="0.1369936" />
+      <window_info id="Structure" order="1" sideWeight="0.65051395" side_tool="true" visible="true" weight="0.1369936" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -350,7 +348,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info anchor="right" x="1367" y="23" width="1279" height="657" id="SciView" order="4" sideWeight="0.49484536" type="WINDOWED" weight="0.24784988" />
+      <window_info anchor="right" x="677" y="251" width="566" height="537" id="SciView" maximized="true" order="4" sideWeight="0.49484536" type="WINDOWED" weight="0.24784988" />
       <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="5" sideWeight="0.5051546" side_tool="true" visible="true" weight="0.15592971" />
     </layout>
   </component>
@@ -362,42 +360,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="_" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/GPU.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="91" column="42" lean-forward="true" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/GPU.py" />
     <entry file="file://$PROJECT_DIR$/image_object_detection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
           <caret line="223" selection-start-line="223" selection-end-line="223" />
           <folding>
             <element signature="e#394#412#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video_object_detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="236" selection-start-line="236" selection-end-line="236" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/obj_det_GPU.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="158" column="33" selection-start-line="151" selection-start-column="12" selection-end-line="158" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -409,10 +378,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/video_object_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3225">
+          <caret line="236" selection-start-line="236" selection-end-line="236" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/obj_det_GPU.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="135" column="42" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/video_GPU.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="111" column="137" selection-start-line="111" selection-start-column="137" selection-end-line="111" selection-end-column="137" />
+        <state relative-caret-position="499">
+          <caret line="196" lean-forward="true" selection-start-line="196" selection-end-line="196" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

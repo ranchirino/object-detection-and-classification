@@ -5,9 +5,10 @@ import sys
 import tensorflow as tf
 
 from matplotlib import pyplot as plt
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 import cv2
 import imageio
+from skimage import transform
 
 import time
 from datetime import datetime
@@ -106,10 +107,18 @@ category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABE
 #   return np.array(image.getdata()).reshape(
 #       (im_height, im_width, 3)).astype(np.uint8)
 
+def draw_image(np_img, text, pos):
+    image = Image.fromarray(np_img)
+    draw = ImageDraw.Draw(image)
+    font = ImageFont.truetype('arial.ttf', 24)
+    color = 'rgb(255, 255, 255)'
+    draw.text(pos, text, fill=color, font=font)
+    return  np.array(image)
+
 
 #%%
 PATH_TO_TEST_VIDEOS_DIR = 'test_videos'
-VIDEO = os.path.join(PATH_TO_TEST_VIDEOS_DIR, 'Philippines LIVE - Traffic Cam & Walk Before The Storm Cebu City Philippines - YouTube.MKV')
+VIDEO = os.path.join(PATH_TO_TEST_VIDEOS_DIR, 'philippines_15fps.mp4')
 # cap = cv2.VideoCapture(VIDEO)
 
 reader = imageio.get_reader(VIDEO)
@@ -143,12 +152,15 @@ with detection_graph.as_default():
             n_frame += 1
             frame_np = np.array(frame)
 
+            # resize image
+            # frame_rs = transform.resize(frame_np, (337, 600))
+
             t1 = datetime.now()
             # run inference
             (score, expand) = sess.run([score_out, expand_out], feed_dict={image_tensor: np.expand_dims(frame_np, 0)})
             output_dict = sess.run(tensor_dict, feed_dict={score_in: score, expand_in: expand})
             inf_speed = (datetime.now() - t1).total_seconds() * 1000 # inference speed per frame
-            print('Inference speed: %.2f ms' % (inf_speed))
+            # print('Inference speed: %.2f ms' % (inf_speed))
 
             if n_frame != 1:
                 tot_inf_speed += inf_speed
@@ -166,9 +178,11 @@ with detection_graph.as_default():
                 output_dict['detection_scores'],
                 category_index,
                 use_normalized_coordinates=True,
-                line_thickness=5)
+                line_thickness=4)
 
-            cv2.imshow('Object Detection', frame_np)
+            image = draw_image(frame_np, 'Inference speed: {:.2f} ms'.format(inf_speed), (20,20))
+
+            cv2.imshow('Object Detection', image)
             if cv2.waitKey(25) & 0xFF == ord('q'):
                 cv2.destroyAllWindows()
                 break
