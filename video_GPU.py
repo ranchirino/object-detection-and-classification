@@ -1,6 +1,7 @@
 import numpy as np
 import os
 import sys
+import visualize
 
 import tensorflow as tf
 
@@ -118,7 +119,7 @@ def draw_image(np_img, text, pos):
 
 #%%
 PATH_TO_TEST_VIDEOS_DIR = 'test_videos'
-video_name = 'new_york_city_1.mp4'
+video_name = 'toronto_1.mp4'
 VIDEO = os.path.join(PATH_TO_TEST_VIDEOS_DIR, video_name)
 cap = cv2.VideoCapture(VIDEO)
 
@@ -177,14 +178,20 @@ with detection_graph.as_default():
             output_dict['detection_scores'] = output_dict['detection_scores'][0]
 
             tv0 = datetime.now()
-            # vis_util.visualize_boxes_and_labels_on_image_array(
+            # frame_np = visualize.visualize_boxes_and_labels(
             #     frame_np,
             #     output_dict['detection_boxes'],
-            #     output_dict['detection_classes'],
-            #     output_dict['detection_scores'],
-            #     category_index,
-            #     use_normalized_coordinates=True,
-            #     line_thickness=4)
+            #     classes=output_dict['detection_classes'],
+            #     scores=output_dict['detection_scores'],
+            #     line_width=3)
+            vis_util.visualize_boxes_and_labels_on_image_array(
+                frame_np,
+                output_dict['detection_boxes'],
+                output_dict['detection_classes'],
+                output_dict['detection_scores'],
+                category_index,
+                use_normalized_coordinates=True,
+                line_thickness=4)
             visual_time = (datetime.now() - tv0).total_seconds() * 1000 # visualization time
 
             time_per_frame = (datetime.now() - tf0).total_seconds() * 1000 # processing time per frame
