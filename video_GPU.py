@@ -111,18 +111,20 @@ def draw_image(np_img, text, pos):
     image = Image.fromarray(np_img)
     draw = ImageDraw.Draw(image)
     font = ImageFont.truetype('arial.ttf', 24)
-    color = 'rgb(255, 255, 255)'
+    color = 'rgb(0, 0, 0)'
     draw.text(pos, text, fill=color, font=font)
     return  np.array(image)
 
 
 #%%
 PATH_TO_TEST_VIDEOS_DIR = 'test_videos'
-VIDEO = os.path.join(PATH_TO_TEST_VIDEOS_DIR, 'philippines_15fps.mp4')
-# cap = cv2.VideoCapture(VIDEO)
+video_name = 'new_york_city_1.mp4'
+VIDEO = os.path.join(PATH_TO_TEST_VIDEOS_DIR, video_name)
+cap = cv2.VideoCapture(VIDEO)
 
-reader = imageio.get_reader(VIDEO)
-writer = imageio.get_writer('video_detection1.mp4', fps=15)
+# reader = imageio.get_reader(VIDEO)
+# fps_video = reader.get_meta_data()['fps']
+# writer = imageio.get_writer('video_detection.mp4', fps=fps_video)
 
 with detection_graph.as_default():
     config = tf.ConfigProto()
@@ -148,7 +150,10 @@ with detection_graph.as_default():
         t0 = datetime.now()
         n_frame = 0
         tot_inf_speed = 0 # average inference speed
-        for i, frame in enumerate(reader):
+        # for i, frame in enumerate(reader):
+        while(cap.isOpened()):
+            ret, frame = cap.read()
+            tf0 = datetime.now()
             n_frame += 1
             frame_np = np.array(frame)
 
@@ -171,18 +176,24 @@ with detection_graph.as_default():
             output_dict['detection_boxes'] = output_dict['detection_boxes'][0]
             output_dict['detection_scores'] = output_dict['detection_scores'][0]
 
-            vis_util.visualize_boxes_and_labels_on_image_array(
-                frame_np,
-                output_dict['detection_boxes'],
-                output_dict['detection_classes'],
-                output_dict['detection_scores'],
-                category_index,
-                use_normalized_coordinates=True,
-                line_thickness=4)
+            tv0 = datetime.now()
+            # vis_util.visualize_boxes_and_labels_on_image_array(
+            #     frame_np,
+            #     output_dict['detection_boxes'],
+            #     output_dict['detection_classes'],
+            #     output_dict['detection_scores'],
+            #     category_index,
+            #     use_normalized_coordinates=True,
+            #     line_thickness=4)
+            visual_time = (datetime.now() - tv0).total_seconds() * 1000 # visualization time
 
-            image = draw_image(frame_np, 'Inference speed: {:.2f} ms'.format(inf_speed), (20,20))
+            time_per_frame = (datetime.now() - tf0).total_seconds() * 1000 # processing time per frame
+            # image = draw_image(frame_np, 'Inference speed: {:.2f} ms'.format(inf_speed), (20,20))
+            # image = draw_image(image, 'Processing time per frame: {:.2f} ms'.format(time_per_frame), (310,20))
+            # writer.append_data(image)
+            print('Inference speed: %.2f ms, Visualization time: %.2f ms' % (inf_speed, visual_time))
 
-            cv2.imshow('Object Detection', image)
+            cv2.imshow('Object Detection', frame_np)
             if cv2.waitKey(25) & 0xFF == ord('q'):
                 cv2.destroyAllWindows()
                 break
@@ -191,8 +202,6 @@ with detection_graph.as_default():
         fps = n_frame / (datetime.now() - t0).total_seconds()
         print('Average inference speed: %.2f ms' % (avg_inf_speed))
         print('Fps: %.2f' % (fps))
-        writer.close()
-
-
+        # writer.close()
 
 

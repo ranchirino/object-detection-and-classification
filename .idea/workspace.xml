@@ -11,6 +11,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/object_detection_and_classification$video_GPU.coverage" NAME="video_GPU Coverage Results" MODIFIED="1545418888948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_DATA_SOURCES" value="true" />
@@ -32,8 +35,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/video_GPU.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="499">
-                  <caret line="196" lean-forward="true" selection-start-line="196" selection-end-line="196" />
+                <state relative-caret-position="-24">
+                  <caret line="166" column="96" lean-forward="true" selection-start-line="166" selection-start-column="96" selection-end-line="166" selection-end-column="96" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -113,7 +116,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -125,6 +127,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,6 +314,8 @@
       <workItem from="1545088542940" duration="324000" />
       <workItem from="1545148962444" duration="13065000" />
       <workItem from="1545172132231" duration="8699000" />
+      <workItem from="1545340980720" duration="560000" />
+      <workItem from="1545410951712" duration="5654000" />
     </task>
     <task id="LOCAL-00001" summary="_">
       <created>1544659587027</created>
@@ -323,18 +328,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39735000" />
+    <option name="totallyTimeSpent" value="45949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.34948605" visible="true" weight="0.1369936" />
-      <window_info id="Structure" order="1" sideWeight="0.65051395" side_tool="true" visible="true" weight="0.1369936" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.34654918" visible="true" weight="0.1401919" />
+      <window_info id="Structure" order="1" sideWeight="0.6534508" side_tool="true" visible="true" weight="0.1401919" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33068362" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -378,16 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/video_object_detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3225">
-          <caret line="236" selection-start-line="236" selection-end-line="236" />
-          <folding>
-            <element signature="e#1#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/obj_det_GPU.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -398,10 +393,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/video_object_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3225">
+          <caret line="236" selection-start-line="236" selection-end-line="236" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/video_GPU.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="196" lean-forward="true" selection-start-line="196" selection-end-line="196" />
+        <state relative-caret-position="-24">
+          <caret line="166" column="96" lean-forward="true" selection-start-line="166" selection-start-column="96" selection-end-line="166" selection-end-column="96" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
