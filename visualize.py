@@ -1,7 +1,4 @@
 import numpy as np
-# import tensorflow as tf
-# import os
-import matplotlib.pyplot as plt
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -39,6 +36,47 @@ def draw_boxes(image, boxes, classes, line_width):
         draw.rectangle([box[1], box[0], box[3], box[2]], outline=COLORS[classes[i]], width=line_width)
     return np.array(image_pil)
 
+def draw_labels_and_scores(image, boxes, classes, scores, category_index, label_size):
+    image_pil = Image.fromarray(image)
+    draw = ImageDraw.Draw(image_pil)
+    font = ImageFont.truetype('arial.ttf', label_size)
+    for i, box in enumerate(boxes):
+        text = "{}: {}%".format(category_index[classes[i]]['name'], int(100 * scores[i]))
+        font_size = font.getsize(text)
+        padding = 2  # 2 pixels
+
+        # Coordinates of the text's background
+        bg_left = box[1]
+        bg_right = bg_left + font_size[0] + 2 * padding
+        bg_top = box[0] - font_size[1] - 2 * padding
+        bg_down = box[0]
+
+        # If the upper of the text's background is above the image top, then
+        # the label text is displayed below the bounding box, in this case, if the
+        # bottom of the text's background is below the image bottom, then the label
+        # text is not displayed
+        if bg_top < 0:
+            bg_down = box[2] + font_size[1] + 2 * padding
+            if bg_down < image.shape[0]:
+                bg_top = box[2]
+
+                # Coordinates of the top left corner of the text
+                text_left = bg_left + padding
+                text_top = bg_top + padding
+
+                draw.rectangle([bg_left, bg_top, bg_right, bg_down], fill=COLORS[classes[i]])
+                draw.text((text_left, text_top), text, font=font, fill='black')
+        else:
+            # Coordinates of the top left corner of the text
+            text_left = bg_left + padding
+            text_top = bg_top + padding
+
+            draw.rectangle([bg_left, bg_top, bg_right, bg_down], fill=COLORS[classes[i]])
+            draw.text((text_left, text_top), text, font=font, fill='black')
+
+    return np.array(image_pil)
+
+
 def visualize_boxes_and_labels(
         image,
         boxes,
@@ -49,12 +87,33 @@ def visualize_boxes_and_labels(
         max_boxes_to_draw=20,
         min_score_thresh=0.5,
         line_width=4,
-        skip_labels=False,
-        skip_scores=False):
+        label_size=18,
+        skip_labels_and_scores=True):
+
+    """
+    Args:
+        image: uint8 numpy array with shape (img_height, img_width, 3).
+        boxes: float32 numpy array with shape (N, 4).
+        classes: uint8 (default: None) numpy array with shape (N).
+        scores: float32 (default: None) numpy array with shape (N).
+        category_index: a dict (default: None) containing category dictionaries (each holding
+            category index 'id' and category name 'name').
+        normalized_coordinates: boolean (default: True) that indicates whether boxes
+            should be interpreted as normalized coordinates or not.
+        max_boxes_to_draw: integer (default: 20). Maximum number of boxes to visualize.
+        min_score_thresh: float (default: 0.5). Minimum score threshold for a box to be visualized.
+        line_width: integer (default: 4) controlling line width of the boxes.
+        label_size: integer (default: 18) controlling the size of the labels and scores font.
+        skip_labels_and_scores: boolean (default: True) that indicates whether to skip
+            label and score when drawing a single detection.
+    Return:
+        uint8 numpy array with shape (img_height, img_width, 3) with overlaid boxes.
+    """
 
     total_to_show = np.min(np.where(scores < min_score_thresh))
     total_to_show = min(total_to_show, max_boxes_to_draw)
     image_np = np.array([])
+
     if total_to_show:
         im_height = image.shape[0]
         im_width = image.shape[1]
@@ -71,25 +130,10 @@ def visualize_boxes_and_labels(
 
         image_np = draw_boxes(image, boxes, classes, line_width)
 
-        # if not skip_labels:
-
+        if not skip_labels_and_scores:
+            image_np = draw_labels_and_scores(image_np, boxes, classes, scores, category_index, label_size)
+    else:
+        image_np = image
 
     return image_np
 
-
-# scores = [0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2]
-# TEST_IMAGE_PATHS = [ os.path.join('test_images', 'image{}.jpg'.format(i)) for i in range(1, 2) ]
-#
-# image = Image.open(TEST_IMAGE_PATHS[0])
-# image = np.array(image)
-# image = np.expand_dims(image, 0)
-#
-# boxes = [[0.2, 0.2, 0.5, 0.5], [0.3, 0.3, 0.6, 0.6]]
-# boxes = np.expand_dims(boxes, 0)
-#
-# tf_img = tf.image.draw_bounding_boxes(image, boxes, name=None)
-#
-# with tf.Session() as sess:
-#     np_img = tf_img.eval()
-# plt.imshow(np_img[0])
-# plt.show()
