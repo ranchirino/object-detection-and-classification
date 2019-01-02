@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="201fc739-a6b6-4060-aa16-1bf559d612a2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluate/coco/coco.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate/coco/coco.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj_det_GPU.py" beforeDir="false" afterPath="$PROJECT_DIR$/img_ssd_mobilenet_GPU.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video_GPU.py" beforeDir="false" afterPath="$PROJECT_DIR$/video_GPU.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/visualize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualize.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,14 +32,26 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5234493">
+    <splitter split-orientation="horizontal" split-proportion="0.39340258">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/visualize.py">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/evaluate/coco/coco.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="553">
-                  <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
+                <state relative-caret-position="301">
+                  <caret line="78" column="22" lean-forward="true" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#2404#2415#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/utils/results.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -49,11 +63,23 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/video_GPU.py">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/utils/visualize.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="179">
-                  <caret line="181" column="25" lean-forward="true" selection-start-line="181" selection-start-column="25" selection-end-line="181" selection-end-column="25" />
+                <state relative-caret-position="285">
+                  <caret line="87" column="24" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="24" />
+                  <folding>
+                    <element signature="e#0#18#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/img_ssd_mobilenet_GPU.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="645">
+                  <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -86,6 +112,11 @@
         <option value="$PROJECT_DIR$/video_object_detection.py" />
         <option value="$PROJECT_DIR$/visualize.py" />
         <option value="$PROJECT_DIR$/video_GPU.py" />
+        <option value="$PROJECT_DIR$/img_ssd_mnet_GPU.py" />
+        <option value="$PROJECT_DIR$/evaluate/coco/mask.py" />
+        <option value="$PROJECT_DIR$/evaluate/coco/coco.py" />
+        <option value="$PROJECT_DIR$/utils/results.py" />
+        <option value="$PROJECT_DIR$/img_ssd_mobilenet_GPU.py" />
       </list>
     </option>
   </component>
@@ -113,6 +144,17 @@
               <item name="object-detection-and-classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="object-detection-and-classification" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="object-detection-and-classification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="object-detection-and-classification" type="462c0819:PsiDirectoryNode" />
+              <item name="evaluate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="object-detection-and-classification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="object-detection-and-classification" type="462c0819:PsiDirectoryNode" />
+              <item name="evaluate" type="462c0819:PsiDirectoryNode" />
+              <item name="coco" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -139,29 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.video_GPU">
-    <configuration name="GPU" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="object-detection-and-classification" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GPU.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.img_ssd_mobilenet_GPU">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="object-detection-and-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,20 +204,36 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="image_object_detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="img_ssd_mobilenet_GPU" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="object-detection-and-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/image_object_detection.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/img_ssd_mobilenet_GPU.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mask" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="object-detection-and-classification" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/evaluate/coco" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluate/coco/mask.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -219,7 +255,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/obj_det_GPU.py" />
+      <option name="SCRIPT_NAME" value="C:\RANGEL\GitHub\object-detection-and-classification\img_ssd_mobilenet_GPU.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -270,19 +306,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.image_object_detection" />
       <item itemvalue="Python.obj_det_GPU" />
-      <item itemvalue="Python.GPU" />
       <item itemvalue="Python.video_GPU" />
       <item itemvalue="Python.visualize" />
+      <item itemvalue="Python.img_ssd_mobilenet_GPU" />
+      <item itemvalue="Python.mask" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.img_ssd_mobilenet_GPU" />
+        <item itemvalue="Python.mask" />
         <item itemvalue="Python.video_GPU" />
         <item itemvalue="Python.visualize" />
         <item itemvalue="Python.obj_det_GPU" />
-        <item itemvalue="Python.GPU" />
-        <item itemvalue="Python.image_object_detection" />
       </list>
     </recent_temporary>
   </component>
@@ -310,6 +346,7 @@
       <workItem from="1545670868074" duration="6238000" />
       <workItem from="1545825545931" duration="6003000" />
       <workItem from="1545832168278" duration="6836000" />
+      <workItem from="1546364367362" duration="22538000" />
     </task>
     <task id="LOCAL-00001" summary="_">
       <created>1544659587027</created>
@@ -322,13 +359,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78744000" />
+    <option name="totallyTimeSpent" value="101282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.33925927" visible="true" weight="0.12633263" />
-      <window_info id="Structure" order="1" sideWeight="0.66074073" side_tool="true" visible="true" weight="0.12633263" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.39805827" visible="true" weight="0.12739871" />
+      <window_info id="Structure" order="1" sideWeight="0.60194176" side_tool="true" visible="true" weight="0.12739871" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -342,7 +380,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.26868907" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.33044422" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -387,30 +425,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/obj_det_GPU.py">
+    <entry file="file://$PROJECT_DIR$/evaluate/coco/annotations/panoptic_val2017.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1367">
-          <caret line="108" lean-forward="true" selection-start-line="107" selection-end-line="108" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video_GPU.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="181" column="25" lean-forward="true" selection-start-line="181" selection-start-column="25" selection-end-line="181" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="188">
+          <caret column="3545309" selection-start-column="3545309" selection-end-column="3545309" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/visualize.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="105" column="72" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="72" />
+        <state relative-caret-position="525">
+          <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluate/coco/mask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluate/coco/_mask.pyx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video_GPU.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluate/coco/coco.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="78" column="22" lean-forward="true" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+          <folding>
+            <element signature="e#2404#2415#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="759" selection-start-column="759" selection-end-column="759" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/visualize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="87" column="24" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluate/coco/results/val2017_ssd_mobilenet.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img_ssd_mobilenet_GPU.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

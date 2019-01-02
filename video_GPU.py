@@ -1,7 +1,7 @@
 import numpy as np
 import os
 import sys
-import visualize
+from utils import visualize
 
 import tensorflow as tf
 
@@ -186,21 +186,13 @@ with detection_graph.as_default():
                 category_index=category_index,
                 line_width=3,
                 skip_labels_and_scores=False)
-            # vis_util.visualize_boxes_and_labels_on_image_array(
-            #     frame_np,
-            #     output_dict['detection_boxes'],
-            #     output_dict['detection_classes'],
-            #     output_dict['detection_scores'],
-            #     category_index,
-            #     use_normalized_coordinates=True,
-            #     line_thickness=4)
             visual_time = (datetime.now() - tv0).total_seconds() * 1000 # visualization time
 
             time_per_frame = (datetime.now() - tf0).total_seconds() * 1000 # processing time per frame
             # image = draw_image(frame_np, 'Inference speed: {:.2f} ms'.format(inf_speed), (20,20))
             # image = draw_image(image, 'Processing time per frame: {:.2f} ms'.format(time_per_frame), (310,20))
             # writer.append_data(image)
-            print('Inference speed: %.2f ms, Visualization time: %.2f ms, Time per frame: %.2f' % (inf_speed, visual_time, time_per_frame))
+            print('Inference speed: %.2f ms, Visualization time: %.2f ms, Time per frame: %.2f ms' % (inf_speed, visual_time, time_per_frame))
 
             cv2.imshow('Object Detection', frame_np)
             if cv2.waitKey(25) & 0xFF == ord('q'):
