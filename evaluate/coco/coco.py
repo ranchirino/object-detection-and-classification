@@ -46,6 +46,7 @@ __version__ = '2.0'
 
 import json
 import time
+import matplotlib; matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.collections import PatchCollection
 from matplotlib.patches import Polygon
@@ -76,7 +77,7 @@ class COCO:
         :return:
         """
         # load dataset
-        self.dataset,self.anns,self.cats,self.imgs = dict(),dict(),dict(),dict()
+        self.dataset,self.anns,self.cats,self.imgs,self.imgToId = dict(),dict(),dict(),dict(),dict()
         self.imgToAnns, self.catToImgs = defaultdict(list), defaultdict(list)
         if not annotation_file == None:
             print('loading annotations into memory...')
@@ -90,7 +91,7 @@ class COCO:
     def createIndex(self):
         # create index
         print('creating index...')
-        anns, cats, imgs = {}, {}, {}
+        anns, cats, imgs, imgToId = {}, {}, {}, {}
         imgToAnns,catToImgs = defaultdict(list),defaultdict(list)
         if 'annotations' in self.dataset:
             for ann in self.dataset['annotations']:
@@ -100,6 +101,7 @@ class COCO:
         if 'images' in self.dataset:
             for img in self.dataset['images']:
                 imgs[img['id']] = img
+                imgToId[img['file_name']] = img['id']
 
         if 'categories' in self.dataset:
             for cat in self.dataset['categories']:
@@ -116,6 +118,7 @@ class COCO:
         self.imgToAnns = imgToAnns
         self.catToImgs = catToImgs
         self.imgs = imgs
+        self.imgToId = imgToId
         self.cats = cats
 
     def info(self):
@@ -305,7 +308,13 @@ class COCO:
 
         print('Loading and preparing results...')
         tic = time.time()
-        if type(resFile) == str or type(resFile) == unicode:
+
+        # Check result type in a way compatible with Python 2 and 3.
+        if PYTHON_VERSION == 2:
+            is_string =  isinstance(resFile, basestring)  # Python 2
+        elif PYTHON_VERSION == 3:
+            is_string = isinstance(resFile, str)  # Python 3
+        if is_string:
             anns = json.load(open(resFile))
         elif type(resFile) == np.ndarray:
             anns = self.loadNumpyAnnotations(resFile)

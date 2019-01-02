@@ -141,7 +141,7 @@ with detection_graph.as_default():
         total_results = []
         t0 = datetime.datetime.now()
         # for image_path in TEST_IMAGE_PATHS:
-        for img in os.listdir(PATH_TO_TEST_IMAGES_DIR):
+        for img in os.listdir(PATH_TO_TEST_IMAGES_DIR)[:3]:
         # img = '000000007888.jpg'
             image_id = coco.imgToId[img]
             image_path = os.path.join(PATH_TO_TEST_IMAGES_DIR, img)
@@ -163,34 +163,35 @@ with detection_graph.as_default():
             boxes = output_dict['detection_boxes'][0]
             scores = output_dict['detection_scores'][0]
 
-            for r in results.get_results_by_score_threshold(
-                    image_np,
-                    image_id,
-                    classes,
-                    boxes,
-                    scores):
-                total_results.append(r)
-
-        json_file_name = 'val2017_ssd_mobilenet.json'
-
-        results.create_json_results_file(
-            total_results,
-            os.path.join(RES_PATH, json_file_name))
+        #     for r in results.get_results_by_score_threshold(
+        #             image_np,
+        #             image_id,
+        #             classes,
+        #             boxes,
+        #             scores,
+        #             min_score_thresh=0.3):
+        #         total_results.append(r)
+        #
+        # json_file_name = 'val2017_ssd_mobilenet_0.3.json'
+        #
+        # results.create_json_results_file(
+        #     total_results,
+        #     os.path.join(RES_PATH, json_file_name))
 
             # print(img)
 
-        print((datetime.datetime.now() - t0).total_seconds())
-            # image_np = visualize.visualize_boxes_and_labels(
-            #     image_np,
-            #     boxes,
-            #     classes=classes,
-            #     scores=scores,
-            #     category_index=category_index,
-            #     line_width=3,
-            #     label_size=15,
-            #     min_score_thresh=0.5,
-            #     skip_labels_and_scores=False)
-            #
-            # # plt.figure(figsize=IMAGE_SIZE)
-            # plt.imshow(image_np)
-            # plt.show()
+        # print((datetime.datetime.now() - t0).total_seconds())
+            image_np = visualize.visualize_boxes_and_labels(
+                image_np,
+                boxes,
+                classes=classes,
+                scores=scores,
+                category_index=category_index,
+                line_width=3,
+                label_size=13,
+                min_score_thresh=0.5,
+                skip_labels_and_scores=False)
+
+            # plt.figure(figsize=IMAGE_SIZE)
+            plt.imshow(image_np)
+            plt.show()
