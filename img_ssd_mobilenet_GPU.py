@@ -101,7 +101,8 @@ category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABE
 
 EVAL_PATH = 'evaluate\coco'
 ANN_PATH = os.path.join(EVAL_PATH, 'annotations')
-IMG_PATH = os.path.join(EVAL_PATH, 'images')
+IMG_PATH = 'C:\RANGEL\GitHub\evaluation_images'
+IMG_PATH_COCO = os.path.join(IMG_PATH, 'coco')
 RES_PATH = os.path.join(EVAL_PATH, 'results')
 ann_file_name = 'instances_val2017.json'
 ann_file = os.path.join(ANN_PATH, ann_file_name)
@@ -110,7 +111,7 @@ ann_file = os.path.join(ANN_PATH, ann_file_name)
 coco = COCO(ann_file)
 
 
-PATH_TO_TEST_IMAGES_DIR = os.path.join(IMG_PATH, 'val2017')
+PATH_TO_TEST_IMAGES_DIR = os.path.join(IMG_PATH_COCO, 'val2017')
 # TEST_IMAGE_PATHS = [os.path.join(PATH_TO_TEST_IMAGES_DIR, img) for img in os.listdir(PATH_TO_TEST_IMAGES_DIR)]
 
 # Size, in inches, of the output images.
