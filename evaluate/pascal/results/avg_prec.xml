@@ -1,0 +1,80 @@
+<item>
+  <category>aeroplane</category>
+  <ap>0.9632949309703721</ap>
+</item>
+<item>
+  <category>bicycle</category>
+  <ap>0.8896635975098292</ap>
+</item>
+<item>
+  <category>bird</category>
+  <ap>0.7810294248791604</ap>
+</item>
+<item>
+  <category>boat</category>
+  <ap>0.6316934888908311</ap>
+</item>
+<item>
+  <category>bottle</category>
+  <ap>0.45119502233394365</ap>
+</item>
+<item>
+  <category>bus</category>
+  <ap>0.8455293634781175</ap>
+</item>
+<item>
+  <category>car</category>
+  <ap>0.6363132043914936</ap>
+</item>
+<item>
+  <category>cat</category>
+  <ap>1.0067713626414754</ap>
+</item>
+<item>
+  <category>chair</category>
+  <ap>0.43014845353367864</ap>
+</item>
+<item>
+  <category>cow</category>
+  <ap>0.7561860198929802</ap>
+</item>
+<item>
+  <category>diningtable</category>
+  <ap>0.3797699742511986</ap>
+</item>
+<item>
+  <category>dog</category>
+  <ap>0.8848995602294638</ap>
+</item>
+<item>
+  <category>horse</category>
+  <ap>0.8770982958007254</ap>
+</item>
+<item>
+  <category>motorbike</category>
+  <ap>0.9771586272491262</ap>
+</item>
+<item>
+  <category>person</category>
+  <ap>0.8599911072709351</ap>
+</item>
+<item>
+  <category>pottedplant</category>
+  <ap>0.44833818908675416</ap>
+</item>
+<item>
+  <category>sheep</category>
+  <ap>0.7149535092181784</ap>
+</item>
+<item>
+  <category>sofa</category>
+  <ap>0.5154801531688578</ap>
+</item>
+<item>
+  <category>train</category>
+  <ap>0.9200356321448182</ap>
+</item>
+<item>
+  <category>tvmonitor</category>
+  <ap>0.6768107448835361</ap>
+</item>
