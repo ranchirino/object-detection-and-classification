@@ -137,3 +137,68 @@ def visualize_boxes_and_labels(
 
     return image_np
 
+
+def visualize_det_and_gt(
+        image,
+        det,
+        gt,
+        line_width=4,
+        label_size=18,
+        show_tp_and_fp=False):
+
+    image_pil = Image.fromarray(image)
+    draw = ImageDraw.Draw(image_pil)
+    for g in gt:
+        gt_left = np.int32(g['bb_left'])
+        gt_top = np.int32(g['bb_top'])
+        gt_right = np.int32(g['bb_right'])
+        gt_bottom = np.int32(g['bb_bottom'])
+        draw.rectangle([gt_left, gt_top, gt_right, gt_bottom],
+                       outline='Red',
+                       width=line_width)
+
+    for d in det:
+        d_left = np.int32(np.round(d['bb_left']))
+        d_top = np.int32(np.round(d['bb_top']))
+        d_right = np.int32(np.round(d['bb_right']))
+        d_bottom = np.int32(np.round(d['bb_bottom']))
+        draw.rectangle([d_left, d_top, d_right, d_bottom],
+                       outline='LimeGreen',
+                       width=line_width)
+
+    if show_tp_and_fp:
+        font = ImageFont.truetype('arial.ttf', label_size)
+        for d in det:
+            if d['tp'] == 1:
+                text = 'tp'
+            else:
+                text = 'fp'
+            font_size = font.getsize(text)
+            padding = 2  # 2 pixels
+
+            # Coordinates of the text's background
+            bg_left = d['bb_left']
+            bg_right = bg_left + font_size[0] + 2 * padding
+            bg_bottom = d['bb_bottom']
+            bg_top = bg_bottom - font_size[1] - 2 * padding
+
+            if bg_top < 0:
+                bg_bottom = d['bb_bottom'] + font_size[1] + 2 * padding
+                if bg_bottom < image.shape[0]:
+                    bg_top = d['bb_bottom']
+
+                    # Coordinates of the top left corner of the text
+                    text_left = bg_left + padding
+                    text_top = bg_top + padding
+
+                    draw.rectangle([bg_left, bg_top, bg_right, bg_bottom], fill='LimeGreen')
+                    draw.text((text_left, text_top), text, font=font, fill='black')
+            else:
+                # Coordinates of the top left corner of the text
+                text_left = bg_left + padding
+                text_top = bg_top + padding
+
+                draw.rectangle([bg_left, bg_top, bg_right, bg_bottom], fill='LimeGreen')
+                draw.text((text_left, text_top), text, font=font, fill='black')
+
+    return np.array(image_pil)

@@ -81,11 +81,12 @@ with detection_graph.as_default():
         total_results = []
         t0 = datetime.now()
         total_imgs = len(image_ids)
-        # for img in os.listdir(PATH_TO_TEST_IMAGES)[:1]:
-        for i, img_id in enumerate(image_ids):
+        for img in os.listdir(PATH_TO_TEST_IMAGES)[:1]:
+        # for i, img_id in enumerate(image_ids):
             tf0 = datetime.now()
             # image_id = coco.imgToId[img]
-            image_path = os.path.join(PATH_TO_TEST_IMAGES, img_id + '.jpg')
+            image_path = os.path.join(PATH_TO_TEST_IMAGES, img)
+            # image_path = os.path.join(PATH_TO_TEST_IMAGES, img_id + '.jpg')
 
             image = Image.open(image_path)
             image_np = np.array(image)
@@ -93,7 +94,7 @@ with detection_graph.as_default():
             if len(image_np.shape) == 2:
                 image_np = np.stack((image_np, image_np, image_np), axis=2)
 
-            print('Processed images: %d/%d' % (i + 1, total_imgs))
+            # print('Processed images: %d/%d' % (i + 1, total_imgs))
             # run inference
             output_dict = sess.run(tensor_dict,
                                    feed_dict={image_tensor: np.expand_dims(image_np, 0)},
@@ -106,17 +107,17 @@ with detection_graph.as_default():
             boxes = output_dict['detection_boxes'][0]
             scores = output_dict['detection_scores'][0]
 
-            for r in results.get_pascal_results_by_score_threshold(
-                    image_np,
-                    img_id,
-                    classes,
-                    boxes,
-                    scores,
-                    index_pascal_categ,
-                    min_score_thresh=0.5):
-                total_results.append(r)
-
-        results.create_pascal_result_files_by_categories(total_results, categories_pascal, RES_PATH_PASCAL)
+        #     for r in results.get_pascal_results_by_score_threshold(
+        #             image_np,
+        #             img_id,
+        #             classes,
+        #             boxes,
+        #             scores,
+        #             index_pascal_categ,
+        #             min_score_thresh=0.5):
+        #         total_results.append(r)
+        #
+        # results.create_pascal_result_files_by_categories(total_results, categories_pascal, RES_PATH_PASCAL)
 
         #
         # json_file_name = 'faster_rcnn_inception_v2.json'
@@ -134,16 +135,16 @@ with detection_graph.as_default():
             #     f.write(trace)
 
 
-            # image_np = visualize.visualize_boxes_and_labels(
-            #     image_np,
-            #     boxes,
-            #     classes=classes,
-            #     scores=scores,
-            #     category_index=category_index,
-            #     line_width=3,
-            #     label_size=13,
-            #     min_score_thresh=0.6,
-            #     skip_labels_and_scores=False)
-            #
-            # plt.imshow(image_np)
-            # plt.show()
+            image_np = visualize.visualize_boxes_and_labels(
+                image_np,
+                boxes,
+                classes=classes,
+                scores=scores,
+                category_index=category_index,
+                line_width=3,
+                label_size=13,
+                min_score_thresh=0.6,
+                skip_labels_and_scores=False)
+
+            plt.imshow(image_np)
+            plt.show()

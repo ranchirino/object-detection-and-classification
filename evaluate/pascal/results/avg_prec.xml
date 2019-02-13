@@ -1,80 +1,80 @@
 <item>
   <category>aeroplane</category>
-  <ap>0.9632949309703721</ap>
+  <ap>0.48344407023381103</ap>
 </item>
 <item>
   <category>bicycle</category>
-  <ap>0.8896635975098292</ap>
+  <ap>0.40860949107115935</ap>
 </item>
 <item>
   <category>bird</category>
-  <ap>0.7810294248791604</ap>
+  <ap>0.5033255438735794</ap>
 </item>
 <item>
   <category>boat</category>
-  <ap>0.6316934888908311</ap>
+  <ap>0.3081745127588416</ap>
 </item>
 <item>
   <category>bottle</category>
-  <ap>0.45119502233394365</ap>
+  <ap>0.34098094123051687</ap>
 </item>
 <item>
   <category>bus</category>
-  <ap>0.8455293634781175</ap>
+  <ap>0.5484887825055456</ap>
 </item>
 <item>
   <category>car</category>
-  <ap>0.6363132043914936</ap>
+  <ap>0.4652144170628124</ap>
 </item>
 <item>
   <category>cat</category>
-  <ap>1.0067713626414754</ap>
+  <ap>0.622675107600781</ap>
 </item>
 <item>
   <category>chair</category>
-  <ap>0.43014845353367864</ap>
+  <ap>0.2644156459566641</ap>
 </item>
 <item>
   <category>cow</category>
-  <ap>0.7561860198929802</ap>
+  <ap>0.508310438085224</ap>
 </item>
 <item>
   <category>diningtable</category>
-  <ap>0.3797699742511986</ap>
+  <ap>0.23512089786109558</ap>
 </item>
 <item>
   <category>dog</category>
-  <ap>0.8848995602294638</ap>
+  <ap>0.5892804131217977</ap>
 </item>
 <item>
   <category>horse</category>
-  <ap>0.8770982958007254</ap>
+  <ap>0.5884784695855059</ap>
 </item>
 <item>
   <category>motorbike</category>
-  <ap>0.9771586272491262</ap>
+  <ap>0.4625694467372281</ap>
 </item>
 <item>
   <category>person</category>
-  <ap>0.8599911072709351</ap>
+  <ap>0.5639565434104596</ap>
 </item>
 <item>
   <category>pottedplant</category>
-  <ap>0.44833818908675416</ap>
+  <ap>0.2639436062357633</ap>
 </item>
 <item>
   <category>sheep</category>
-  <ap>0.7149535092181784</ap>
+  <ap>0.5194875910958827</ap>
 </item>
 <item>
   <category>sofa</category>
-  <ap>0.5154801531688578</ap>
+  <ap>0.26684018439673574</ap>
 </item>
 <item>
   <category>train</category>
-  <ap>0.9200356321448182</ap>
+  <ap>0.535176385152425</ap>
 </item>
 <item>
   <category>tvmonitor</category>
-  <ap>0.6768107448835361</ap>
+  <ap>0.5023492189392137</ap>
 </item>

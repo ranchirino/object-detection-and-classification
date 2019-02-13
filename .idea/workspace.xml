@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="201fc739-a6b6-4060-aa16-1bf559d612a2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluate/pascal/pascal.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate/pascal/pascal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluate/pascal/results/avg_prec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate/pascal/results/avg_prec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img_faster_rcnn_inception_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/img_faster_rcnn_inception_v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/results.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/results.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pascal_evaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/pascal_evaluation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/visualize.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +49,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/utils/results.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
+                <state relative-caret-position="1500">
+                  <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+                  <folding>
+                    <element signature="e#0#18#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/utils/visualize.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3030">
+                  <caret line="204" selection-start-line="204" selection-end-line="204" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -58,22 +73,10 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pascal_evaluation.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="43" column="49" lean-forward="true" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
+                <state relative-caret-position="511">
+                  <caret line="63" selection-start-line="63" selection-end-line="63" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/utils/visualize.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="93" column="8" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="8" />
-                  <folding>
-                    <element signature="e#0#18#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -82,8 +85,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/evaluate/pascal/pascal.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="218" column="28" lean-forward="true" selection-start-line="218" selection-start-column="28" selection-end-line="218" selection-end-column="28" />
+                <state relative-caret-position="2685">
+                  <caret line="179" column="16" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -98,8 +101,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/img_faster_rcnn_inception_v2.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-870">
-                  <caret line="35" column="52" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="52" />
+                <state relative-caret-position="316">
+                  <caret line="140" column="32" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -110,7 +113,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/coco_evaluation.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
+                <state relative-caret-position="75">
                   <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
@@ -122,7 +125,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/evaluate/coco/coco.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3120">
+                <state relative-caret-position="4620">
                   <caret line="310" selection-start-line="310" selection-end-line="310" />
                   <folding>
                     <element signature="e#2404#2415#0" expanded="true" />
@@ -164,8 +167,9 @@
         <option value="$PROJECT_DIR$/img_ssd_mobilenet_GPU.py" />
         <option value="$PROJECT_DIR$/utils/results.py" />
         <option value="$PROJECT_DIR$/img_faster_rcnn_inception_v2.py" />
-        <option value="$PROJECT_DIR$/pascal_evaluation.py" />
         <option value="$PROJECT_DIR$/evaluate/pascal/pascal.py" />
+        <option value="$PROJECT_DIR$/utils/visualize.py" />
+        <option value="$PROJECT_DIR$/pascal_evaluation.py" />
       </list>
     </option>
   </component>
@@ -186,7 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,6 +217,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,6 +288,9 @@
       <module name="object-detection-and-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -325,6 +332,9 @@
       <module name="object-detection-and-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -407,7 +417,8 @@
       <workItem from="1549114647363" duration="1823000" />
       <workItem from="1549126124802" duration="10742000" />
       <workItem from="1549151647817" duration="271000" />
-      <workItem from="1549152249767" duration="55778000" />
+      <workItem from="1549152249767" duration="86138000" />
+      <workItem from="1550077920313" duration="1170000" />
     </task>
     <task id="LOCAL-00001" summary="_">
       <created>1544659587027</created>
@@ -420,7 +431,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179260000" />
+    <option name="totallyTimeSpent" value="210790000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -435,8 +446,8 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.39158577" visible="true" weight="0.13166311" />
-      <window_info id="Structure" order="1" sideWeight="0.60841423" side_tool="true" visible="true" weight="0.13166311" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.38996765" visible="true" weight="0.13272922" />
+      <window_info id="Structure" order="1" sideWeight="0.6100324" side_tool="true" visible="true" weight="0.13272922" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -556,9 +567,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/img_ssd_mobilenet_GPU.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/visualize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3030">
+          <caret line="204" selection-start-line="204" selection-end-line="204" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pascal_evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img_faster_rcnn_inception_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="140" column="32" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/coco_evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="75">
           <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -568,7 +626,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/evaluate/coco/coco.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3120">
+        <state relative-caret-position="4620">
           <caret line="310" selection-start-line="310" selection-end-line="310" />
           <folding>
             <element signature="e#2404#2415#0" expanded="true" />
@@ -576,57 +634,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img_faster_rcnn_inception_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-870">
-          <caret line="35" column="52" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/results.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/visualize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="93" column="8" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img_ssd_mobilenet_GPU.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pascal_evaluation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="43" column="49" lean-forward="true" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/evaluate/pascal/pascal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="218" column="28" lean-forward="true" selection-start-line="218" selection-start-column="28" selection-end-line="218" selection-end-column="28" />
+        <state relative-caret-position="2685">
+          <caret line="179" column="16" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

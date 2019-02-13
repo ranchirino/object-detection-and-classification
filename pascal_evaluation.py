@@ -1,7 +1,10 @@
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 from evaluate.pascal import pascal
 from object_detection.utils import label_map_util
+from utils import visualize
+from PIL import Image
 
 IMG_PATH = 'C:\RANGEL\GitHub\evaluation_images'
 IMG_PATH_PASCAL = os.path.join(IMG_PATH, 'pascal')
@@ -12,6 +15,7 @@ EVAL_PATH_PASCAL = os.path.join(EVAL_PATH, 'pascal')
 
 IMG_SETS_PASCAL = os.path.join(EVAL_PATH_PASCAL, 'image_sets\main')
 RES_PATH_PASCAL = os.path.join(EVAL_PATH_PASCAL, 'results')
+PATH_TO_TEST_IMAGES = os.path.join(IMG_PATH_PASCAL, 'voc2012')
 
 val_set = open(os.path.join(IMG_SETS_PASCAL, 'val.txt'), "r")
 image_ids = [id[:-1] for id in val_set]
@@ -22,7 +26,7 @@ categories_pascal = label_map_util.create_category_index_from_labelmap(PATH_TO_L
 categories = [categories_pascal[item]['name'] for item in categories_pascal]
 
 #%% get ground truth annotations
-gt_annot = pascal.get_det_annot(ANN_PATH_PASCAL, image_ids)
+gt_annot = pascal.get_gt_annot(ANN_PATH_PASCAL, image_ids, difficult=False)
 
 # get detections results
 det_result = pascal.get_det_results_by_category_files(RES_PATH_PASCAL, categories)
@@ -30,11 +34,14 @@ det_result = pascal.get_det_results_by_category_files(RES_PATH_PASCAL, categorie
 # obtain the true positives and the false positives by category,
 # the precision, the recall, and the average precision
 avg_prec = []
+det_evaluated = []
 for categ in categories:
     gt = [gt for gt in gt_annot if gt['category'] == categ]
     det = [det for det in det_result if det['category'] == categ]
 
-    tp, fp = pascal.obtain_tp_and_fp_by_category(gt, det)
+    det_tp, tp, fp = pascal.obtain_tp_and_fp_by_category(gt, det, image_ids)
+    for d in det_tp:
+        det_evaluated.append(d)
     precision, recall = pascal.compute_precision_and_recall(tp, fp, len(gt))
     ap = pascal.average_precision(precision, recall)
     # pascal.plot_precision_recall_curve(precision, recall, categ, ap)
@@ -42,3 +49,15 @@ for categ in categories:
                      'ap': ap})
     pascal.save_ap_by_category(avg_prec, 'avg_prec', RES_PATH_PASCAL)
     map = pascal.mean_average_precision(avg_prec)
+#
+#
+# # visualize an image with detections and ground truth
+image_id = image_ids[np.random.randint(0, len(image_ids))]
+gt = [gt for gt in gt_annot if gt['image_id'] == image_id]
+det = [det for det in det_evaluated if det['image_id'] == image_id]
+image_path = os.path.join(PATH_TO_TEST_IMAGES, image_id + '.jpg')
+image = Image.open(image_path)
+image_np = np.array(image)
+image_np = visualize.visualize_det_and_gt(image_np, det, gt, line_width=3, label_size=13, show_tp_and_fp=True)
+plt.imshow(image_np)
+plt.show()
