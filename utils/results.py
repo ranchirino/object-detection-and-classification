@@ -1,6 +1,7 @@
 import numpy as np
 import os
 import json
+import lxml.etree as et
 
 def get_results_by_score_threshold(
         image,
@@ -116,5 +117,50 @@ def create_pascal_result_files_by_categories(
                 file.write('%s %.4f %.4f %.4f %.4f %.4f\n' % (r['image_id'], r['score'], r['bbox'][0], r['bbox'][1], r['bbox'][2], r['bbox'][3]))
 
         file.close()
+
+
+def save_data_in_xml_file(
+        data,
+        file_name,
+        path):
+    """
+    Args:
+        data: A list of dict with the data to save
+        file_name: String
+        path: String
+    Return:
+        A xml file in the 'path' location with the name 'file_name'
+    """
+
+    with open(os.path.join(path, '%s.xml' % (file_name)), 'w') as file:
+        items = et.Element('items')
+        for d in data:
+            item = et.SubElement(items, 'item')
+
+            keys = d.keys()
+            for key in keys:
+                elem = et.SubElement(item, key)
+                elem.text = str(d[key])
+
+            text = et.tostring(item, encoding="unicode", pretty_print=True)
+            file.write(text)
+
+
+def read_data_from_xml_file(
+        file_name,
+        path):
+
+    data = []
+    tree = et.parse(os.path.join(path, '%s.xml' % (file_name)))
+    root = tree.getroot()
+    items = [elem for elem in root.iter() if elem.tag == 'item']
+    for item in items:
+        dict = {}
+        for child in item.getchildren():
+            dict[child.tag] = child.text
+        data.append(dict)
+
+    return data
+
 
 

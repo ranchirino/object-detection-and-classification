@@ -14,8 +14,8 @@ def get_gt_annot(
         det_files_id: list of string of detection images id
         difficult: boolean (default: False) if the annotations of the difficult objects are obtained.
     Return:
-        list of dict that contains the image id, the category,
-        and the bounding box coordinates of the ground truth annotations
+        list of dict that contains the image id (string), the category (string),
+        the bounding box coordinates (float) of the ground truth annotations, and the difficult annotation (boolean)
     """
 
     annot = []
@@ -59,8 +59,8 @@ def get_det_results_by_category_files(
         path:  string path of txt result files
         categories_list: list of string categories
     Return:
-        list of dict that contains the category, the image id, the confidence score,
-        and the bounding box coordinates of the detection results
+        list of dict that contains the category, the image id (string), the confidence score (float),
+        and the bounding box coordinates (float) of the detection results
     """
     results = []
     for file_name in os.listdir(path):
@@ -95,6 +95,7 @@ def obtain_tp_and_fp_by_category(
         gt_list: list of ground truth for a specific category X
         det_list: list of detections for a specific category X
         iou_threshold: float value that indicates the threshold of the true positives detections
+        image_ids: list of string image ids
     Return:
         tp: numpy vector of length(det_list) that indicates (with 1) which detections are true positives
         fp: numpy vector of length(det_list) that indicates (with 1) which detections are false positives. fp = not(tp)
@@ -242,19 +243,22 @@ def plot_precision_recall_curve(
     plt.show()
 
 
-# def average_precision(
-#         precision,
-#         recall):
-#     m_rec = np.concatenate(([0], recall, [1]))
-#     m_pre = np.concatenate(([0], precision, [0]))
-#
-#     for i in range(len(m_pre)-2, -1, -1):
-#         m_pre[i] = max(m_pre[i], m_pre[i+1])
-#
-#     i = np.where(m_rec[1:] != m_rec[:-1])[0] + 1
-#     ap = sum((m_rec[i] - m_rec[i-1]) * m_pre[i])
-#
-#     return ap
+def interpolated_average_precision(
+        precision,
+        recall):
+    m_rec = np.concatenate(([0], recall))
+    m_pre = np.concatenate((precision, [0]))
+
+    for i in range(len(m_pre)-2, -1, -1):
+        m_pre[i] = max(m_pre[i], m_pre[i+1])
+    m_pre = m_pre[:-1]
+
+    change_rec = m_rec[1:] - m_rec[:-1]
+    ap = sum(change_rec * m_pre)
+    # i = np.where(m_rec[1:] != m_rec[:-1])[0] + 1
+    # ap = sum((m_rec[i] - m_rec[i-1]) * m_pre[i])
+
+    return ap
 
 def average_precision(
         precision,
