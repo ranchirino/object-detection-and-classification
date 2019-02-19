@@ -76,13 +76,13 @@ category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABE
 
 #%%
 PATH_TO_TEST_VIDEOS_DIR = os.path.join('C:\RANGEL\GitHub', 'test_videos')
-video_name = 'toronto_1.mp4'
+video_name = 'new_york_city_1.mp4'
 VIDEO = os.path.join(PATH_TO_TEST_VIDEOS_DIR, video_name)
 cap = cv2.VideoCapture(VIDEO)
 
-# reader = imageio.get_reader(VIDEO)
-# fps_video = reader.get_meta_data()['fps']
-# writer = imageio.get_writer('video_faster_rcnn_incepv2_1.mp4', fps=fps_video)
+reader = imageio.get_reader(VIDEO)
+fps_video = reader.get_meta_data()['fps']
+writer = imageio.get_writer('video_faster_rcnn_incepv2_2.mp4', fps=fps_video)
 
 
 with detection_graph.as_default():
@@ -111,9 +111,9 @@ with detection_graph.as_default():
         acc_inf_speed = 0 # average inference speed
         acc_fps = 0
         # total_time = 0 # total time without counting the 1st frame
-        # for i, frame in enumerate(reader):
-        while(cap.isOpened()):
-            ret, frame = cap.read()
+        for i, frame in enumerate(reader):
+        # while(cap.isOpened()):
+        #     ret, frame = cap.read()
             tf0 = datetime.now()
             n_frame += 1
             frame_np = np.array(frame)
@@ -144,7 +144,7 @@ with detection_graph.as_default():
                 scores=output_dict['detection_scores'],
                 category_index=category_index,
                 line_width=3,
-                min_score_thresh=0.7,
+                min_score_thresh=0.75,
                 skip_labels_and_scores=False)
             visual_time = (datetime.now() - tv0).total_seconds() * 1000 # visualization time
 
@@ -154,9 +154,9 @@ with detection_graph.as_default():
                 acc_fps = acc_fps + fps
                 avg_fps = acc_fps / (n_frame - 1)
                 acc_inf_speed += inf_speed
-                # frame_np = visualize.draw_text(frame_np, ['Inference speed: {:.2f} ms, Time per frame: {:.2f} ms, Average fps: {:.2f}'.format(inf_speed, time_per_frame, avg_fps)], [(20,20)])
+                frame_np = visualize.draw_text(frame_np, ['Inference speed: {:.2f} ms, Time per frame: {:.2f} ms, Average fps: {:.2f}'.format(inf_speed, time_per_frame, avg_fps)], [(20,20)])
 
-            # writer.append_data(frame_np)
+            writer.append_data(frame_np)
             print('Inference speed: %.2f ms, Visualization time: %.2f ms' % (inf_speed, visual_time))
 
             cv2.imshow('Object Detection', frame_np)
@@ -168,7 +168,7 @@ with detection_graph.as_default():
         # fps = n_frame / (datetime.now() - t0).total_seconds()
         print('Average inference speed: %.2f ms' % (avg_inf_speed))
         # print('Fps: %.2f' % (fps))
-        # writer.close()
+        writer.close()
 
         # fetched_timeline = timeline.Timeline(run_metadata.step_stats)
         # chrome_trace = fetched_timeline.generate_chrome_trace_format()

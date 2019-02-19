@@ -29,6 +29,15 @@ COLORS = [
     'WhiteSmoke', 'Yellow', 'YellowGreen'
 ]
 
+def draw_text(image, text, pos, font_size=18, font_color='white'):
+    image_pil = Image.fromarray(image)
+    draw = ImageDraw.Draw(image_pil)
+    font = ImageFont.truetype('arial.ttf', font_size)
+    for i, t in enumerate(text):
+        draw.text(pos[i], t, font=font, fill=font_color)
+    return np.array(image_pil)
+
+
 def draw_boxes(image, boxes, classes, line_width):
     image_pil = Image.fromarray(image)
     draw = ImageDraw.Draw(image_pil)
