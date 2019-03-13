@@ -50,7 +50,7 @@ for categ in categories:
         det_evaluated.append(d)
     precision, recall = pascal.compute_precision_and_recall(tp, fp, len(gt))
     ap = pascal.interpolated_average_precision(precision, recall)
-    # pascal.plot_precision_recall_curve(precision, recall, categ, ap)
+    pascal.plot_precision_recall_curve(precision, recall, categ, ap)
     avg_prec.append({'category': categ,
                         'ap': ap})
     # pascal.save_ap_by_category(avg_prec, 'avg_prec_%.2f' % score, RES_PATH_PASCAL)
@@ -60,23 +60,23 @@ for categ in categories:
 
 
 # # visualize an image with detections and ground truth
-# image_id = image_ids[np.random.randint(0, len(image_ids))]
-# gt = [gt for gt in gt_annot if gt['image_id'] == image_id]
-# det = [det for det in det_evaluated if det['image_id'] == image_id]
-# image_path = os.path.join(PATH_TO_TEST_IMAGES, image_id + '.jpg')
-# image = Image.open(image_path)
-# image_np = np.array(image)
-# image_np = visualize.visualize_det_and_gt(image_np, det, gt, line_width=3, label_size=13, show_tp_and_fp=True)
-# plt.imshow(image_np)
-# plt.show()
+image_id = image_ids[np.random.randint(0, len(image_ids))]
+gt = [gt for gt in gt_annot if gt['image_id'] == image_id]
+det = [det for det in det_evaluated if det['image_id'] == image_id]
+image_path = os.path.join(PATH_TO_TEST_IMAGES, image_id + '.jpg')
+image = Image.open(image_path)
+image_np = np.array(image)
+image_np = visualize.visualize_det_and_gt(image_np, det, gt, line_width=3, label_size=13, show_tp_and_fp=True)
+plt.imshow(image_np)
+plt.show()
 
 
 # plot map by score
-map_by_score = results.read_data_from_xml_file('map_by_score', RES_PATH_PASCAL)
-map_to_plot = [float(m['map']) for m in map_by_score]
-plt.plot(np.arange(0.5, 0.96, 0.01), map_to_plot, 'bo')
-plt.ylabel('mAP')
-plt.xlabel('Confidence score')
-plt.title('mAP by confidence score')
-plt.grid(True)
-plt.show()
+# map_by_score = results.read_data_from_xml_file('map_by_score', RES_PATH_PASCAL)
+# map_to_plot = [float(m['map']) for m in map_by_score]
+# plt.plot(np.arange(0.5, 0.96, 0.01), map_to_plot, 'bo')
+# plt.ylabel('mAP')
+# plt.xlabel('Confidence score')
+# plt.title('mAP by confidence score')
+# plt.grid(True)
+# plt.show()

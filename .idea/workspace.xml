@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="201fc739-a6b6-4060-aa16-1bf559d612a2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/utils/visualize.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/visualize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vid_faster_rcnn_inception_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/vid_faster_rcnn_inception_v2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tucker_dec_tensorflow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pascal_evaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/pascal_evaluation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tensor_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tensor_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,43 +36,10 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/img_ssd_mobilenet_GPU.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="36" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/utils/results.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="241">
-                  <caret line="148" column="28" lean-forward="true" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#0#18#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/utils/visualize.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1469">
-                  <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
-                  <folding>
-                    <element signature="e#0#18#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pascal_evaluation.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1215">
-                  <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
+                <state relative-caret-position="480">
+                  <caret line="38" column="49" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="49" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -79,12 +48,24 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/evaluate/pascal/pascal.py">
+            <entry file="file://$PROJECT_DIR$/tensor_test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="36" column="43" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="43" />
+                <state relative-caret-position="285">
+                  <caret line="61" column="42" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="42" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tucker_dec_tensorflow.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="795">
+                  <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+                  <folding>
+                    <element signature="e#0#21#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -94,10 +75,22 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tucker_tf.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+                  <folding>
+                    <element signature="e#0#21#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/img_faster_rcnn_inception_v2.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
+                <state relative-caret-position="300">
                   <caret line="37" column="47" selection-start-line="37" selection-end-line="37" selection-end-column="47" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
@@ -106,10 +99,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/vid_faster_rcnn_inception_v2.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-404">
+                <state relative-caret-position="1110">
                   <caret line="86" selection-start-line="86" selection-end-line="86" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
@@ -176,9 +169,12 @@
         <option value="$PROJECT_DIR$/img_faster_rcnn_inception_v2.py" />
         <option value="$PROJECT_DIR$/evaluate/pascal/pascal.py" />
         <option value="$PROJECT_DIR$/utils/results.py" />
-        <option value="$PROJECT_DIR$/pascal_evaluation.py" />
         <option value="$PROJECT_DIR$/utils/visualize.py" />
         <option value="$PROJECT_DIR$/vid_faster_rcnn_inception_v2.py" />
+        <option value="$PROJECT_DIR$/pascal_evaluation.py" />
+        <option value="$PROJECT_DIR$/tensor_test.py" />
+        <option value="$PROJECT_DIR$/tucker_tf.py" />
+        <option value="$PROJECT_DIR$/tucker_dec_tensorflow.py" />
       </list>
     </option>
   </component>
@@ -206,22 +202,6 @@
               <item name="object-detection-and-classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="object-detection-and-classification" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="object-detection-and-classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="object-detection-and-classification" type="462c0819:PsiDirectoryNode" />
-              <item name="evaluate" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="object-detection-and-classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="object-detection-and-classification" type="462c0819:PsiDirectoryNode" />
-              <item name="evaluate" type="462c0819:PsiDirectoryNode" />
-              <item name="pascal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="object-detection-and-classification" type="b2602c69:ProjectViewProjectNode" />
-              <item name="object-detection-and-classification" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -248,7 +228,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.vid_faster_rcnn_inception_v2">
+  <component name="RunManager" selected="Python.tucker_dec_tensorflow">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="object-detection-and-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -271,76 +251,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="coco_evaluation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="object-detection-and-classification" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/coco_evaluation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="img_faster_rcnn_inception_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="object-detection-and-classification" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/img_faster_rcnn_inception_v2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="img_ssd_mobilenet_GPU" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="object-detection-and-classification" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/img_ssd_mobilenet_GPU.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="pascal_evaluation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="object-detection-and-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -356,10 +273,76 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tensor_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="object-detection-and-classification" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tensor_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tucker_dec_tensorflow" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="object-detection-and-classification" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tucker_dec_tensorflow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tucker_tf" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="object-detection-and-classification" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tucker_tf.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="vid_faster_rcnn_inception_v2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="object-detection-and-classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -376,19 +359,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.img_ssd_mobilenet_GPU" />
-      <item itemvalue="Python.coco_evaluation" />
       <item itemvalue="Python.vid_faster_rcnn_inception_v2" />
-      <item itemvalue="Python.img_faster_rcnn_inception_v2" />
       <item itemvalue="Python.pascal_evaluation" />
+      <item itemvalue="Python.tensor_test" />
+      <item itemvalue="Python.tucker_dec_tensorflow" />
+      <item itemvalue="Python.tucker_tf" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.vid_faster_rcnn_inception_v2" />
+        <item itemvalue="Python.tucker_dec_tensorflow" />
+        <item itemvalue="Python.tucker_tf" />
+        <item itemvalue="Python.tensor_test" />
         <item itemvalue="Python.pascal_evaluation" />
-        <item itemvalue="Python.img_faster_rcnn_inception_v2" />
-        <item itemvalue="Python.img_ssd_mobilenet_GPU" />
-        <item itemvalue="Python.coco_evaluation" />
+        <item itemvalue="Python.vid_faster_rcnn_inception_v2" />
       </list>
     </recent_temporary>
   </component>
@@ -422,6 +405,14 @@
       <workItem from="1549151647817" duration="271000" />
       <workItem from="1549152249767" duration="86138000" />
       <workItem from="1550077920313" duration="24088000" />
+      <workItem from="1550861331549" duration="3530000" />
+      <workItem from="1551110458454" duration="9051000" />
+      <workItem from="1551129496899" duration="3231000" />
+      <workItem from="1551199728070" duration="17893000" />
+      <workItem from="1551231737200" duration="6179000" />
+      <workItem from="1551288156895" duration="3074000" />
+      <workItem from="1551463531094" duration="2160000" />
+      <workItem from="1551477966086" duration="15933000" />
     </task>
     <task id="LOCAL-00001" summary="_">
       <created>1544659587027</created>
@@ -434,7 +425,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233708000" />
+    <option name="totallyTimeSpent" value="294759000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -448,8 +439,8 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.38996765" visible="true" weight="0.13272922" />
-      <window_info id="Structure" order="1" sideWeight="0.6100324" side_tool="true" visible="true" weight="0.13272922" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.37378642" visible="true" weight="0.14285715" />
+      <window_info id="Structure" order="1" sideWeight="0.6262136" side_tool="true" visible="true" weight="0.14285715" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -566,6 +557,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2400">
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/visualize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/evaluate/pascal/pascal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3330">
+          <caret line="225" column="30" selection-start-line="225" selection-start-column="30" selection-end-line="225" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pascal_evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="38" column="49" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tucker_tf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img_faster_rcnn_inception_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="37" column="47" selection-start-line="37" selection-end-line="37" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vid_faster_rcnn_inception_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/coco_evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -586,62 +647,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img_faster_rcnn_inception_v2.py">
+    <entry file="file://$PROJECT_DIR$/tensor_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="37" column="47" selection-start-line="37" selection-end-line="37" selection-end-column="47" />
+        <state relative-caret-position="285">
+          <caret line="61" column="42" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="42" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/visualize.py">
+    <entry file="file://$PROJECT_DIR$/tucker_dec_tensorflow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1469">
-          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+        <state relative-caret-position="795">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vid_faster_rcnn_inception_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-404">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pascal_evaluation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/evaluate/pascal/pascal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/results.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="148" column="28" lean-forward="true" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
